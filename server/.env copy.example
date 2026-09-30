@@ -1,0 +1,19 @@
+# Copy to .env and fill in your key:
+#   copy ".env copy.example" .env
+
+GROQ_API_KEY=your_groq_api_key_here
+GROQ_MODEL=llama-3.3-70b-versatile
+
+# STT — small tốt hơn base cho tiếng Việt
+WHISPER_MODEL=small
+WHISPER_DEVICE=cpu
+WHISPER_COMPUTE=int8
+WHISPER_LANGUAGE=vi
+
+# Optional overrides
+# ONEAI_HOST=0.0.0.0
+# ONEAI_PORT=8765
+# YOLO_MODEL=yolov8n.pt
+# YOLO_CONF=0.4
+# VIDEO_MAX_FPS=8
+# TTS_VOICE=vi-VN-HoaiMyNeural

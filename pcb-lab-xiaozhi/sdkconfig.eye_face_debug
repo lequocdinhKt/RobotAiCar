@@ -1,0 +1,4 @@
+# Enable OLED eye-face debug for PCB Lab (BOOT cycles emotions).
+# Merge into build by appending to sdkconfig, or:
+#   idf.py menuconfig → Xiaozhi Assistant → PCB Lab: OLED eye-face debug
+CONFIG_PCB_LAB_EYE_FACE_DEBUG=y

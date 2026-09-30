@@ -1,0 +1,9 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+yolov8n.pt
+*.pt
+runs/
+.cache/

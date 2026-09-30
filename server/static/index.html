@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OneAi Debug — Browser Simulator</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="status-bar">
+    <div class="brand">OneAi</div>
+    <div class="conn">
+      <span id="connDot" class="dot off" title="connection"></span>
+      <span id="connLabel">Chưa kết nối</span>
+    </div>
+    <div class="meta">
+      <span>Session: <code id="sessionId">—</code></span>
+      <span>RTT: <code id="rtt">—</code> ms</span>
+      <span>Pipeline: <code id="pipeline">idle</code></span>
+    </div>
+    <div class="clients" id="clientList" title="clients"></div>
+  </header>
+
+  <main class="layout">
+    <section class="video-pane">
+      <div class="video-wrap">
+        <video id="localVideo" playsinline autoplay muted></video>
+        <canvas id="overlay"></canvas>
+      </div>
+      <div class="video-tools">
+        <label><input type="checkbox" id="camToggle" checked /> Camera</label>
+        <span id="detCount">0 objects</span>
+      </div>
+    </section>
+
+    <aside class="voice-pane">
+      <h2>Giọng nói</h2>
+      <button id="ptt" type="button">Giữ để nói</button>
+      <label class="mic-row"><input type="checkbox" id="micToggle" checked /> Mic</label>
+
+      <div class="log-block">
+        <h3>STT (bạn nói)</h3>
+        <pre id="sttLog" class="log"></pre>
+      </div>
+      <div class="log-block">
+        <h3>LLM (trả lời)</h3>
+        <pre id="llmLog" class="log"></pre>
+        <p class="emotion">Emotion: <code id="emotion">—</code></p>
+      </div>
+      <div class="log-block">
+        <h3>Sự kiện / lỗi</h3>
+        <pre id="eventLog" class="log small"></pre>
+      </div>
+    </aside>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
